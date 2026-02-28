@@ -354,9 +354,9 @@ const App: React.FC = () => {
                       aria-label="Twitter/X"
                     >
                       <img 
-                        src="/twitter.svg" 
+                        src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" 
                         alt="Twitter" 
-                        className={`w-5 h-5 sm:w-6 sm:h-6 ${theme === 'dark' ? 'invert' : ''} group-hover:invert-0 transition-all`}
+                        className="w-5 h-5 sm:w-6 sm:h-6"
                       />
                     </a>
                     <a 
@@ -388,9 +388,9 @@ const App: React.FC = () => {
                       aria-label="Pinterest"
                     >
                       <img 
-                        src="/icons8-pinterest-50.png" 
+                        src="https://cdn-icons-png.flaticon.com/512/5968/5968797.png" 
                         alt="Pinterest" 
-                        className={`w-5 h-5 sm:w-6 sm:h-6 ${theme === 'dark' ? 'invert' : ''} group-hover:invert-0 transition-all`}
+                        className="w-5 h-5 sm:w-6 sm:h-6"
                       />
                     </a>
                     <a 
