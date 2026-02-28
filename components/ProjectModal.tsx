@@ -49,23 +49,23 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ item, onClose }) => 
     >
       <button 
         onClick={onClose}
-        className={`absolute top-4 right-4 z-[2001] p-3 rounded-full bg-white/10 text-white hover:bg-white/20 hover:scale-110 transition-all backdrop-blur-sm ${
+        className={`absolute top-2 right-2 sm:top-4 sm:right-4 z-[2001] p-2 sm:p-3 rounded-full bg-white/10 text-white hover:bg-white/20 hover:scale-110 transition-all backdrop-blur-sm ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
         }`}
         style={{ transitionDelay: '200ms' }}
       >
-        <X size={28} />
+        <X size={24} className="sm:w-7 sm:h-7" />
       </button>
 
       <button 
         onClick={handleFullscreen}
-        className={`absolute top-4 right-20 z-[2001] p-3 rounded-full bg-white/10 text-white hover:bg-white/20 hover:scale-110 transition-all backdrop-blur-sm ${
+        className={`absolute top-2 right-14 sm:top-4 sm:right-20 z-[2001] p-2 sm:p-3 rounded-full bg-white/10 text-white hover:bg-white/20 hover:scale-110 transition-all backdrop-blur-sm ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
         }`}
         style={{ transitionDelay: '200ms' }}
         title="Fullscreen"
       >
-        <Maximize2 size={28} />
+        <Maximize2 size={24} className="sm:w-7 sm:h-7" />
       </button>
 
       <div 

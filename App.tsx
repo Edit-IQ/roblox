@@ -213,33 +213,33 @@ const App: React.FC = () => {
                   </span>
                 </div>
                 
-                <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 tracking-tight uppercase leading-none">
+                <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black mb-4 sm:mb-6 tracking-tight uppercase leading-none">
                   MEET <span className="text-sky-500">EDITIQ</span>
                 </h2>
                 
-                <p className={`text-lg leading-relaxed mb-10 ${
+                <p className={`text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 ${
                   theme === 'dark' ? 'text-slate-300' : 'text-slate-600'
                 }`}>
                   I don't just design thumbnails. I create <span className="text-sky-500 font-semibold">visual narratives</span> that demand attention. 
                   In the fast-paced multiverse of Roblox content, your thumbnail is your movie poster.
                 </p>
                 
-                <div className="grid grid-cols-2 gap-6 mb-10">
-                  <div className={`p-6 rounded-2xl border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-10">
+                  <div className={`p-4 sm:p-6 rounded-2xl border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                     theme === 'dark' 
                       ? 'bg-white/5 border-sky-500/20 hover:border-sky-500/40 hover:bg-white/10' 
                       : 'bg-slate-50 border-sky-500/20 hover:border-sky-500/40 hover:bg-slate-100'
                   }`}>
-                    <h4 className="text-sky-500 font-black text-4xl mb-2">500+</h4>
-                    <p className="text-xs font-bold uppercase tracking-wide text-slate-500">POSTERS CREATED</p>
+                    <h4 className="text-sky-500 font-black text-3xl sm:text-4xl mb-1 sm:mb-2">500+</h4>
+                    <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wide text-slate-500">POSTERS CREATED</p>
                   </div>
-                  <div className={`p-6 rounded-2xl border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                  <div className={`p-4 sm:p-6 rounded-2xl border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                     theme === 'dark' 
                       ? 'bg-white/5 border-sky-500/20 hover:border-sky-500/40 hover:bg-white/10' 
                       : 'bg-slate-50 border-sky-500/20 hover:border-sky-500/40 hover:bg-slate-100'
                   }`}>
-                    <h4 className="text-sky-500 font-black text-4xl mb-2">2.4M+</h4>
-                    <p className="text-xs font-bold uppercase tracking-wide text-slate-500">VIEWS GENERATED</p>
+                    <h4 className="text-sky-500 font-black text-3xl sm:text-4xl mb-1 sm:mb-2">2.4M+</h4>
+                    <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wide text-slate-500">VIEWS GENERATED</p>
                   </div>
                 </div>
 
@@ -272,16 +272,16 @@ const App: React.FC = () => {
           
           <div className="max-w-6xl mx-auto">
             {/* Header */}
-            <div className="text-center mb-16">
-              <div className="inline-block mb-6">
-                <span className="text-sky-500 text-xs font-bold tracking-widest uppercase px-4 py-2 bg-sky-500/10 rounded-full border border-sky-500/20">
+            <div className="text-center mb-12 sm:mb-16">
+              <div className="inline-block mb-4 sm:mb-6">
+                <span className="text-sky-500 text-[10px] sm:text-xs font-bold tracking-widest uppercase px-3 sm:px-4 py-1.5 sm:py-2 bg-sky-500/10 rounded-full border border-sky-500/20">
                   CASTING CALL
                 </span>
               </div>
-              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 tracking-tight uppercase">
+              <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black mb-4 sm:mb-6 tracking-tight uppercase">
                 START <span className="text-sky-500">PRODUCTION</span>
               </h2>
-              <p className={`text-base sm:text-lg max-w-2xl mx-auto ${
+              <p className={`text-sm sm:text-base lg:text-lg max-w-2xl mx-auto px-4 ${
                 theme === 'dark' ? 'text-slate-400' : 'text-slate-600'
               }`}>
                 Ready to bring your story to the big screen? Let's collaborate on your next blockbuster.
@@ -292,61 +292,61 @@ const App: React.FC = () => {
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-black uppercase mb-6">Contact Information</h3>
+                  <h3 className="text-xl sm:text-2xl font-black uppercase mb-4 sm:mb-6">Contact Information</h3>
                   
                   {/* Email */}
-                  <div className={`flex items-center gap-4 p-6 rounded-2xl border mb-4 transition-all duration-300 hover:scale-105 ${
+                  <div className={`flex items-center gap-3 sm:gap-4 p-4 sm:p-6 rounded-2xl border mb-3 sm:mb-4 transition-all duration-300 hover:scale-105 ${
                     theme === 'dark' 
                       ? 'bg-white/5 border-sky-500/20 hover:border-sky-500/40' 
                       : 'bg-slate-50 border-sky-500/20 hover:border-sky-500/40'
                   }`}>
-                    <div className="w-12 h-12 rounded-full bg-sky-500/10 flex items-center justify-center text-sky-500">
-                      <Mail size={24} />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-sky-500/10 flex items-center justify-center text-sky-500 shrink-0">
+                      <Mail size={20} className="sm:w-6 sm:h-6" />
                     </div>
-                    <div>
-                      <h4 className="text-xs font-bold uppercase text-slate-500 tracking-wider mb-1">EMAIL US</h4>
-                      <p className="font-bold">contact.editiq@gmail.com</p>
+                    <div className="min-w-0">
+                      <h4 className="text-[10px] sm:text-xs font-bold uppercase text-slate-500 tracking-wider mb-1">EMAIL US</h4>
+                      <p className="font-bold text-xs sm:text-base break-all">contact.editiq@gmail.com</p>
                     </div>
                   </div>
 
                   {/* WhatsApp */}
-                  <div className={`flex items-center gap-4 p-6 rounded-2xl border transition-all duration-300 hover:scale-105 ${
+                  <div className={`flex items-center gap-3 sm:gap-4 p-4 sm:p-6 rounded-2xl border transition-all duration-300 hover:scale-105 ${
                     theme === 'dark' 
                       ? 'bg-white/5 border-sky-500/20 hover:border-sky-500/40' 
                       : 'bg-slate-50 border-sky-500/20 hover:border-sky-500/40'
                   }`}>
-                    <div className="w-12 h-12 rounded-full bg-sky-500/10 flex items-center justify-center text-sky-500">
-                      <Send size={24} />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-sky-500/10 flex items-center justify-center text-sky-500 shrink-0">
+                      <Send size={20} className="sm:w-6 sm:h-6" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold uppercase text-slate-500 tracking-wider mb-1">WHATSAPP</h4>
-                      <p className="font-bold">+91 9434 8877 05</p>
+                      <h4 className="text-[10px] sm:text-xs font-bold uppercase text-slate-500 tracking-wider mb-1">WHATSAPP</h4>
+                      <p className="font-bold text-xs sm:text-base">+91 9434 8877 05</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Social Media */}
                 <div>
-                  <h3 className="text-2xl font-black uppercase mb-6">Follow Us</h3>
-                  <div className="flex gap-4">
+                  <h3 className="text-xl sm:text-2xl font-black uppercase mb-4 sm:mb-6">Follow Us</h3>
+                  <div className="flex flex-wrap gap-3 sm:gap-4">
                     <a 
                       href="https://instagram.com" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
+                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
                         theme === 'dark'
                           ? 'bg-white/5 hover:bg-sky-500 border border-white/10 text-white'
                           : 'bg-slate-100 hover:bg-sky-500 border border-slate-300 text-slate-700'
                       } hover:text-white`}
                       aria-label="Instagram"
                     >
-                      <Instagram size={24} />
+                      <Instagram size={20} className="sm:w-6 sm:h-6" />
                     </a>
                     <a 
                       href="https://twitter.com" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
+                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
                         theme === 'dark'
                           ? 'bg-white/5 hover:bg-sky-500 border border-white/10'
                           : 'bg-slate-100 hover:bg-sky-500 border border-slate-300'
@@ -356,21 +356,21 @@ const App: React.FC = () => {
                       <img 
                         src="./twitter.svg" 
                         alt="Twitter" 
-                        className={`w-6 h-6 ${theme === 'dark' ? 'invert' : ''} group-hover:invert-0 transition-all`}
+                        className={`w-5 h-5 sm:w-6 sm:h-6 ${theme === 'dark' ? 'invert' : ''} group-hover:invert-0 transition-all`}
                       />
                     </a>
                     <a 
                       href="https://linkedin.com" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
+                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
                         theme === 'dark'
                           ? 'bg-white/5 hover:bg-sky-500 border border-white/10 text-white'
                           : 'bg-slate-100 hover:bg-sky-500 border border-slate-300 text-slate-700'
                       } hover:text-white`}
                       aria-label="LinkedIn"
                     >
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
                         <circle cx="4" cy="4" r="2"></circle>
@@ -380,7 +380,7 @@ const App: React.FC = () => {
                       href="https://pinterest.com" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
+                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
                         theme === 'dark'
                           ? 'bg-white/5 hover:bg-sky-500 border border-white/10'
                           : 'bg-slate-100 hover:bg-sky-500 border border-slate-300'
@@ -390,38 +390,38 @@ const App: React.FC = () => {
                       <img 
                         src="./icons8-pinterest-50.png" 
                         alt="Pinterest" 
-                        className={`w-6 h-6 ${theme === 'dark' ? 'invert' : ''} group-hover:invert-0 transition-all`}
+                        className={`w-5 h-5 sm:w-6 sm:h-6 ${theme === 'dark' ? 'invert' : ''} group-hover:invert-0 transition-all`}
                       />
                     </a>
                     <a 
                       href="https://github.com" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
+                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
                         theme === 'dark'
                           ? 'bg-white/5 hover:bg-sky-500 border border-white/10 text-white'
                           : 'bg-slate-100 hover:bg-sky-500 border border-slate-300 text-slate-700'
                       } hover:text-white`}
                       aria-label="GitHub"
                     >
-                      <Github size={24} />
+                      <Github size={20} className="sm:w-6 sm:h-6" />
                     </a>
                   </div>
                 </div>
               </div>
 
               {/* Contact Form */}
-              <div className={`p-8 rounded-3xl border ${
+              <div className={`p-6 sm:p-8 rounded-3xl border ${
                 theme === 'dark' 
                   ? 'bg-white/5 border-sky-500/20' 
                   : 'bg-slate-50 border-sky-500/20'
               }`}>
-                <h3 className="text-2xl font-black uppercase mb-6">Send Message</h3>
-                <form className="space-y-4">
+                <h3 className="text-xl sm:text-2xl font-black uppercase mb-4 sm:mb-6">Send Message</h3>
+                <form className="space-y-3 sm:space-y-4">
                   <input 
                     type="text" 
                     placeholder="YOUR NAME" 
-                    className={`w-full px-6 py-4 rounded-xl font-semibold uppercase tracking-wide text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
+                    className={`w-full px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-semibold uppercase tracking-wide text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
                       theme === 'dark'
                         ? 'bg-white/5 border border-white/10 text-white placeholder-slate-500'
                         : 'bg-white border border-slate-300 text-slate-900 placeholder-slate-400'
@@ -430,7 +430,7 @@ const App: React.FC = () => {
                   <input 
                     type="email" 
                     placeholder="YOUR EMAIL" 
-                    className={`w-full px-6 py-4 rounded-xl font-semibold uppercase tracking-wide text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
+                    className={`w-full px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-semibold uppercase tracking-wide text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
                       theme === 'dark'
                         ? 'bg-white/5 border border-white/10 text-white placeholder-slate-500'
                         : 'bg-white border border-slate-300 text-slate-900 placeholder-slate-400'
@@ -439,7 +439,7 @@ const App: React.FC = () => {
                   <textarea 
                     placeholder="TELL US ABOUT THE PROJECT" 
                     rows={5}
-                    className={`w-full px-6 py-4 rounded-xl font-semibold uppercase tracking-wide text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all resize-none ${
+                    className={`w-full px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-semibold uppercase tracking-wide text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all resize-none ${
                       theme === 'dark'
                         ? 'bg-white/5 border border-white/10 text-white placeholder-slate-500'
                         : 'bg-white border border-slate-300 text-slate-900 placeholder-slate-400'
@@ -447,7 +447,7 @@ const App: React.FC = () => {
                   ></textarea>
                   <button 
                     type="submit"
-                    className="w-full bg-sky-500 text-white py-5 rounded-xl font-bold uppercase tracking-wider text-sm hover:bg-sky-600 transition-all duration-300 hover:scale-105 shadow-lg shadow-sky-500/30"
+                    className="w-full bg-sky-500 text-white py-4 sm:py-5 rounded-xl font-bold uppercase tracking-wider text-xs sm:text-sm hover:bg-sky-600 transition-all duration-300 hover:scale-105 shadow-lg shadow-sky-500/30"
                   >
                     SEND MESSAGE
                   </button>
@@ -459,27 +459,27 @@ const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className={`py-12 border-t ${
+      <footer className={`py-8 sm:py-12 border-t ${
         theme === 'dark' 
           ? 'bg-[#030303] border-sky-500/10' 
           : 'bg-slate-50 border-sky-500/10'
       }`}>
-        <div className="max-w-[1800px] mx-auto px-6 sm:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            {/* Brand */}
-            <div className="flex items-center gap-6">
-              <div className="border-2 border-sky-500 px-5 py-2 font-black text-2xl text-sky-500 hover:bg-sky-500 hover:text-white transition-all duration-300 cursor-pointer">
+        <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="flex flex-col gap-6 sm:gap-8">
+            {/* Brand - Centered on mobile */}
+            <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 sm:gap-6">
+              <div className="border-2 border-sky-500 px-4 sm:px-5 py-1.5 sm:py-2 font-black text-xl sm:text-2xl text-sky-500 hover:bg-sky-500 hover:text-white transition-all duration-300 cursor-pointer">
                 EDITIQ
               </div>
-              <span className={`text-xs font-semibold tracking-wider uppercase ${
+              <span className={`text-[10px] sm:text-xs font-semibold tracking-wider uppercase text-center ${
                 theme === 'dark' ? 'text-slate-500' : 'text-slate-600'
               }`}>
                 © 2024 PRODUCTIONS • ALL RIGHTS RESERVED
               </span>
             </div>
 
-            {/* Navigation */}
-            <div className="flex items-center gap-8 text-xs font-semibold tracking-wide uppercase">
+            {/* Navigation - Centered on mobile, wrapped */}
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 lg:gap-8 text-[10px] sm:text-xs font-semibold tracking-wide uppercase">
               <a 
                 href="#home" 
                 className={`transition-colors hover:text-sky-500 ${
@@ -514,57 +514,57 @@ const App: React.FC = () => {
               </a>
             </div>
 
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
+            {/* Social Links - Centered */}
+            <div className="flex items-center justify-center gap-3 sm:gap-4">
               <a 
                 href="https://instagram.com" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-sky-500 hover:text-white ${
+                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-sky-500 hover:text-white ${
                   theme === 'dark'
                     ? 'bg-white/5 text-slate-400 border border-white/10'
                     : 'bg-slate-100 text-slate-600 border border-slate-300'
                 }`}
                 aria-label="Instagram"
               >
-                <Instagram size={18} />
+                <Instagram size={16} className="sm:w-[18px] sm:h-[18px]" />
               </a>
               <a 
                 href="https://twitter.com" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-sky-500 hover:text-white ${
+                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-sky-500 hover:text-white ${
                   theme === 'dark'
                     ? 'bg-white/5 text-slate-400 border border-white/10'
                     : 'bg-slate-100 text-slate-600 border border-slate-300'
                 }`}
                 aria-label="Twitter"
               >
-                <Twitter size={18} />
+                <Twitter size={16} className="sm:w-[18px] sm:h-[18px]" />
               </a>
               <a 
                 href="https://github.com" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-sky-500 hover:text-white ${
+                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-sky-500 hover:text-white ${
                   theme === 'dark'
                     ? 'bg-white/5 text-slate-400 border border-white/10'
                     : 'bg-slate-100 text-slate-600 border border-slate-300'
                 }`}
                 aria-label="GitHub"
               >
-                <Github size={18} />
+                <Github size={16} className="sm:w-[18px] sm:h-[18px]" />
               </a>
               <a 
                 href="mailto:contact.editiq@gmail.com" 
-                className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-sky-500 hover:text-white ${
+                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-sky-500 hover:text-white ${
                   theme === 'dark'
                     ? 'bg-white/5 text-slate-400 border border-white/10'
                     : 'bg-slate-100 text-slate-600 border border-slate-300'
                 }`}
                 aria-label="Mail"
               >
-                <Mail size={18} />
+                <Mail size={16} className="sm:w-[18px] sm:h-[18px]" />
               </a>
             </div>
           </div>
