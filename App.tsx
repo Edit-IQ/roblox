@@ -50,7 +50,7 @@ const App: React.FC = () => {
 
   const [scrollPosition, setScrollPosition] = React.useState(0);
   const itemsPerRow = 3;
-  const rowHeight = 400; // Approximate height of each row including gap
+  const rowHeight = 300; // Approximate height of each row including gap
   const visibleRows = 2;
   const totalRows = Math.ceil(PORTFOLIO_ITEMS.length / itemsPerRow);
   const maxScroll = Math.max(0, (totalRows - visibleRows) * rowHeight);
@@ -132,8 +132,8 @@ const App: React.FC = () => {
           {/* Scrollable container - no manual scroll, only button control */}
           <div className="relative">
             {/* Container with overflow hidden */}
-            <div id="thumbnail-scroll" className="relative h-[800px] overflow-hidden">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+            <div id="thumbnail-scroll" className="relative h-[600px] sm:h-[650px] overflow-hidden">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
                 {PORTFOLIO_ITEMS.map((item, index) => (
                   <ThumbnailCard 
                     key={item.id} 

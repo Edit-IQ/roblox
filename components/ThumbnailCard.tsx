@@ -31,8 +31,8 @@ export const ThumbnailCard: React.FC<ThumbnailCardProps> = ({ item, onClick, the
             </div>
         </div>
       </div>
-      <div className="mt-4 px-2">
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-sky-500 mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">{item.category}</h3>
+      <div className="mt-2 px-1">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-sky-500 mb-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">{item.category}</h3>
           <h2 className="text-sm font-bold uppercase tracking-tight group-hover:text-sky-500 transition-colors">{item.title}</h2>
       </div>
     </div>
