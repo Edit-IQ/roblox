@@ -354,7 +354,7 @@ const App: React.FC = () => {
                       aria-label="Twitter/X"
                     >
                       <img 
-                        src="/twitter.svg" 
+                        src="./twitter.svg" 
                         alt="Twitter" 
                         className={`w-6 h-6 ${theme === 'dark' ? 'invert' : ''} group-hover:invert-0 transition-all`}
                       />
@@ -388,7 +388,7 @@ const App: React.FC = () => {
                       aria-label="Pinterest"
                     >
                       <img 
-                        src="/icons8-pinterest-50.png" 
+                        src="./icons8-pinterest-50.png" 
                         alt="Pinterest" 
                         className={`w-6 h-6 ${theme === 'dark' ? 'invert' : ''} group-hover:invert-0 transition-all`}
                       />
