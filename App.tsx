@@ -356,7 +356,7 @@ const App: React.FC = () => {
                       <img 
                         src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" 
                         alt="Twitter" 
-                        className="w-5 h-5 sm:w-6 sm:h-6"
+                        className={`w-5 h-5 sm:w-6 sm:h-6 ${theme === 'dark' ? 'brightness-0 invert' : ''} group-hover:brightness-0 group-hover:invert transition-all`}
                       />
                     </a>
                     <a 
@@ -390,7 +390,7 @@ const App: React.FC = () => {
                       <img 
                         src="https://cdn-icons-png.flaticon.com/512/5968/5968797.png" 
                         alt="Pinterest" 
-                        className="w-5 h-5 sm:w-6 sm:h-6"
+                        className={`w-5 h-5 sm:w-6 sm:h-6 ${theme === 'dark' ? 'brightness-0 invert' : ''} group-hover:brightness-0 group-hover:invert transition-all`}
                       />
                     </a>
                     <a 
