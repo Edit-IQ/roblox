@@ -7,7 +7,7 @@ import { ProjectModal } from './components/ProjectModal';
 import { ThemeToggle } from './components/ThemeToggle';
 import { PORTFOLIO_ITEMS, REVIEWS, ORDER_PACKAGES } from './constants';
 import { ThumbnailItem, Theme } from './types';
-import { Check, Mail, Instagram, Twitter, Send } from 'lucide-react';
+import { Check, Mail, Instagram, Twitter, Send, Github } from 'lucide-react';
 
 const App: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<ThumbnailItem | null>(null);
@@ -330,7 +330,9 @@ const App: React.FC = () => {
                   <h3 className="text-2xl font-black uppercase mb-6">Follow Us</h3>
                   <div className="flex gap-4">
                     <a 
-                      href="#" 
+                      href="https://instagram.com" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
                         theme === 'dark'
                           ? 'bg-white/5 hover:bg-sky-500 border border-white/10 text-white'
@@ -341,7 +343,9 @@ const App: React.FC = () => {
                       <Instagram size={24} />
                     </a>
                     <a 
-                      href="#" 
+                      href="https://twitter.com" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
                         theme === 'dark'
                           ? 'bg-white/5 hover:bg-sky-500 border border-white/10'
@@ -356,7 +360,9 @@ const App: React.FC = () => {
                       />
                     </a>
                     <a 
-                      href="#" 
+                      href="https://linkedin.com" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
                         theme === 'dark'
                           ? 'bg-white/5 hover:bg-sky-500 border border-white/10 text-white'
@@ -371,7 +377,9 @@ const App: React.FC = () => {
                       </svg>
                     </a>
                     <a 
-                      href="#" 
+                      href="https://pinterest.com" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
                         theme === 'dark'
                           ? 'bg-white/5 hover:bg-sky-500 border border-white/10'
@@ -384,6 +392,19 @@ const App: React.FC = () => {
                         alt="Pinterest" 
                         className={`w-6 h-6 ${theme === 'dark' ? 'invert' : ''} group-hover:invert-0 transition-all`}
                       />
+                    </a>
+                    <a 
+                      href="https://github.com" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${
+                        theme === 'dark'
+                          ? 'bg-white/5 hover:bg-sky-500 border border-white/10 text-white'
+                          : 'bg-slate-100 hover:bg-sky-500 border border-slate-300 text-slate-700'
+                      } hover:text-white`}
+                      aria-label="GitHub"
+                    >
+                      <Github size={24} />
                     </a>
                   </div>
                 </div>
@@ -496,7 +517,9 @@ const App: React.FC = () => {
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <a 
-                href="#" 
+                href="https://instagram.com" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-sky-500 hover:text-white ${
                   theme === 'dark'
                     ? 'bg-white/5 text-slate-400 border border-white/10'
@@ -507,7 +530,9 @@ const App: React.FC = () => {
                 <Instagram size={18} />
               </a>
               <a 
-                href="#" 
+                href="https://twitter.com" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-sky-500 hover:text-white ${
                   theme === 'dark'
                     ? 'bg-white/5 text-slate-400 border border-white/10'
@@ -518,7 +543,20 @@ const App: React.FC = () => {
                 <Twitter size={18} />
               </a>
               <a 
-                href="#" 
+                href="https://github.com" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-sky-500 hover:text-white ${
+                  theme === 'dark'
+                    ? 'bg-white/5 text-slate-400 border border-white/10'
+                    : 'bg-slate-100 text-slate-600 border border-slate-300'
+                }`}
+                aria-label="GitHub"
+              >
+                <Github size={18} />
+              </a>
+              <a 
+                href="mailto:contact.editiq@gmail.com" 
                 className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-sky-500 hover:text-white ${
                   theme === 'dark'
                     ? 'bg-white/5 text-slate-400 border border-white/10'
