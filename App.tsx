@@ -14,6 +14,7 @@ const App: React.FC = () => {
   const [showAll, setShowAll] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [fadeIn, setFadeIn] = useState(true);
   const [slideDirection, setSlideDirection] = useState<'up' | 'down'>('down');
   const [theme, setTheme] = useState<Theme>(() => {
     return (localStorage.getItem('theme') as Theme) || 'dark';
@@ -48,41 +49,12 @@ const App: React.FC = () => {
     }, 100);
   };
 
-  const [scrollPosition, setScrollPosition] = React.useState(0);
-  const itemsPerRow = 3;
-  const rowHeight = 300; // Approximate height of each row including gap
-  const visibleRows = 2;
-  const totalRows = Math.ceil(PORTFOLIO_ITEMS.length / itemsPerRow);
-  const maxScroll = Math.max(0, (totalRows - visibleRows) * rowHeight);
-
-  const handleNextPage = () => {
-    setScrollPosition(prev => {
-      const newPos = Math.min(prev + rowHeight, maxScroll);
-      const container = document.getElementById('thumbnail-scroll');
-      if (container) {
-        const grid = container.firstElementChild as HTMLElement;
-        if (grid) {
-          grid.style.transition = 'transform 0.7s ease-in-out';
-          grid.style.transform = `translateY(-${newPos}px)`;
-        }
-      }
-      return newPos;
-    });
-  };
-
-  const handlePrevPage = () => {
-    setScrollPosition(prev => {
-      const newPos = Math.max(prev - rowHeight, 0);
-      const container = document.getElementById('thumbnail-scroll');
-      if (container) {
-        const grid = container.firstElementChild as HTMLElement;
-        if (grid) {
-          grid.style.transition = 'transform 0.7s ease-in-out';
-          grid.style.transform = `translateY(-${newPos}px)`;
-        }
-      }
-      return newPos;
-    });
+  const handlePageChange = (page: number) => {
+    setFadeIn(false);
+    setTimeout(() => {
+      setCurrentPage(page);
+      setFadeIn(true);
+    }, 300);
   };
 
   const displayedItems = showAll 
@@ -110,66 +82,38 @@ const App: React.FC = () => {
             <div className="w-16 sm:w-20 lg:w-24 h-1 bg-sky-500 mt-4 sm:mt-5 lg:mt-6"></div>
           </div>
           
-          {/* Scrollable container for thumbnails with arrow controls */}
-          <div className="relative">
-            {/* Up Arrow */}
-            <div className="absolute -top-12 sm:-top-16 left-1/2 -translate-x-1/2 z-50">
-              <button 
-                onClick={handlePrevPage}
-                className={`p-3 sm:p-4 rounded-full transition-all duration-300 hover:scale-110 ${
-                  theme === 'dark' 
-                    ? 'bg-white/10 hover:bg-sky-500 text-white' 
-                    : 'bg-black/10 hover:bg-sky-500 text-black hover:text-white'
-                }`}
-                aria-label="Scroll up"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6">
-                  <polyline points="18 15 12 9 6 15"></polyline>
-                </svg>
-              </button>
-            </div>
-
-          {/* Scrollable container - no manual scroll, only button control */}
-          <div className="relative">
-            {/* Container with overflow hidden */}
-            <div id="thumbnail-scroll" className="relative h-[600px] sm:h-[650px] overflow-hidden">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
-                {PORTFOLIO_ITEMS.map((item, index) => (
-                  <ThumbnailCard 
-                    key={item.id} 
-                    item={item} 
-                    theme={theme} 
-                    onClick={setSelectedItem}
-                    hasFade={false}
-                  />
-                ))}
-              </div>
-            </div>
-
-            {/* Gradient fade at bottom only */}
-            <div className={`absolute bottom-0 left-0 right-0 h-24 z-10 pointer-events-none ${
-              theme === 'dark' 
-                ? 'bg-gradient-to-t from-black via-black/80 to-transparent' 
-                : 'bg-gradient-to-t from-white via-white/80 to-transparent'
-            }`}></div>
+          {/* Thumbnail Grid */}
+          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5 mb-12 transition-opacity duration-300 ${
+            fadeIn ? 'opacity-100' : 'opacity-0'
+          }`}>
+            {PORTFOLIO_ITEMS.slice(currentPage * 9, (currentPage + 1) * 9).map((item) => (
+              <ThumbnailCard 
+                key={item.id} 
+                item={item} 
+                theme={theme} 
+                onClick={setSelectedItem}
+                hasFade={false}
+              />
+            ))}
           </div>
 
-            {/* Down Arrow */}
-            <div className="absolute -bottom-12 sm:-bottom-16 left-1/2 -translate-x-1/2 z-50">
-              <button 
-                onClick={handleNextPage}
-                className={`p-3 sm:p-4 rounded-full transition-all duration-300 hover:scale-110 ${
-                  theme === 'dark' 
-                    ? 'bg-white/10 hover:bg-sky-500 text-white' 
-                    : 'bg-black/10 hover:bg-sky-500 text-black hover:text-white'
+          {/* Pagination */}
+          <div className="flex items-center justify-center gap-2">
+            {Array.from({ length: Math.ceil(PORTFOLIO_ITEMS.length / 9) }, (_, i) => (
+              <button
+                key={i}
+                onClick={() => handlePageChange(i)}
+                className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full font-bold text-sm sm:text-base transition-all duration-300 ${
+                  currentPage === i
+                    ? 'bg-sky-500 text-white scale-110'
+                    : theme === 'dark'
+                    ? 'bg-white/10 text-white hover:bg-white/20'
+                    : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
                 }`}
-                aria-label="Scroll down"
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
+                {i + 1}
               </button>
-            </div>
+            ))}
           </div>
         </section>
 
