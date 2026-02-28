@@ -102,7 +102,12 @@ const App: React.FC = () => {
             {Array.from({ length: Math.ceil(PORTFOLIO_ITEMS.length / 9) }, (_, i) => (
               <button
                 key={i}
-                onClick={() => handlePageChange(i)}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  handlePageChange(i);
+                }}
                 className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full font-bold text-sm sm:text-base transition-all duration-300 ${
                   currentPage === i
                     ? 'bg-sky-500 text-white scale-110'
