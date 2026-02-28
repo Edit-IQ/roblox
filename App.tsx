@@ -468,8 +468,10 @@ const App: React.FC = () => {
           <div className="flex flex-col gap-6 sm:gap-8">
             {/* Brand - Centered on mobile */}
             <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 sm:gap-6">
-              <div className="border-2 border-sky-500 px-4 sm:px-5 py-1.5 sm:py-2 font-black text-xl sm:text-2xl text-sky-500 hover:bg-sky-500 hover:text-white transition-all duration-300 cursor-pointer">
-                EDITIQ
+              <div className="flex items-center gap-1">
+                <span className="text-sky-500 text-xl sm:text-2xl font-black" style={{ fontFamily: 'Comic Sans MS, cursive' }}>Edit</span>
+                <span className={`text-xl sm:text-2xl font-black transition-colors duration-500 ${theme === 'dark' ? 'text-white' : 'text-black'}`} style={{ fontFamily: 'Comic Sans MS, cursive' }}>IQ</span>
+                <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-yellow-400 rounded-full"></div>
               </div>
               <span className={`text-[10px] sm:text-xs font-semibold tracking-wider uppercase text-center ${
                 theme === 'dark' ? 'text-slate-500' : 'text-slate-600'
